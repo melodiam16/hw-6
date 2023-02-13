@@ -778,19 +778,22 @@ body {
   color: #4d5ae5;
 }
 
-.checkbox-check:checked .form-argeement {
-  background-color: #404bbf;
-}
-
-.fake-checkbox {
+.checkbox-check {
+  appearance: none;
   width: 16px;
   height: 16px;
   border: 1.25px solid #2e2f42;
   border-radius: 2px;
+  background-image: url("data:image/svg+xml,%3Csvg id='icon-checkmark' xmlns='http://www.w3.org/2000/svg' width='10' height='8' fill='none'%3E%3Cpath fill='%23F4F4FD' d='M8.446.255A.917.917 0 0 1 10 .901a.928.928 0 0 1-.242.649L4.864 7.704a.92.92 0 0 1-1.019.229.92.92 0 0 1-.306-.204L.293 4.466a.925.925 0 0 1-.226-1.024.925.925 0 0 1 .87-.578.916.916 0 0 1 .656.294L4.162 5.74 8.422.282a.329.329 0 0 1 .025-.027h-.001Z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: center;
+
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.fake-checkbox-icons {
-  opacity: 0;
+.checkbox-check:checked {
+  background-color: #404bbf;
+  border-color: #404bbf;
 }
 
 .form-argeement .backdrop {
@@ -856,5 +859,5 @@ body {
 
 .modal-btn:hover .modal-icon-btn:hover,
 .modal-btn:focus .modal-icon-btn:focus {
-  fill: currentColor;
+  fill: #ffffff;
 }
