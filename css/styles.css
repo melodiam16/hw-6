@@ -875,12 +875,7 @@ body {
   background-color: #404bbf;
 }
 
-/* .modal-btn:hover + .modal-icon-btn,
-.modal-btn:focus + .modal-icon-btn {
-  fill: #ffffff;
-} */
-
-.modal-icon-btn:hover,
-.modal-icon-btn:focus {
+.modal-btn:hover .modal-icon-btn,
+.modal-btn:focus .modal-icon-btn {
   fill: #ffffff;
 }
