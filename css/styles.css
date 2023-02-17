@@ -570,7 +570,6 @@ body {
 }
 
 .form-footer {
-  margin-bottom: 100px;
   margin-left: 80px;
 }
 
@@ -644,10 +643,6 @@ body {
   background-image: url('../');
 }
 
-.user-form {
-  margin: 72px 24px 24px 24px;
-}
-
 .user-form-txt-title {
   font-weight: 500;
   font-size: 16px;
@@ -656,6 +651,11 @@ body {
   letter-spacing: 0.02em;
   color: #2e2f42;
   margin-bottom: 16px;
+}
+
+.label-indent {
+  display: block;
+  margin-bottom: 8px;
 }
 
 .form-txt-elements {
@@ -675,7 +675,6 @@ body {
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
   box-sizing: border-box;
-  margin-bottom: 8px;
   padding-left: 42px;
   color: #000000;
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -694,18 +693,33 @@ body {
   position: absolute;
   left: 16px;
   top: 11px;
+  fill: #2e2f42;
 }
 
 .phone-icon-svg {
   position: absolute;
   top: 13px;
   left: 16px;
+  fill: #2e2f42;
+}
+
+.user-form-input:focus + .person-icon-svg {
+  fill: #4d5ae5;
+}
+
+.user-form-input:focus + .phone-icon-svg {
+  fill: #4d5ae5;
 }
 
 .massage-icon-svg {
   position: absolute;
   top: 14px;
   left: 17.5px;
+  fill: #2e2f42;
+}
+
+.user-form-input:focus + .massage-icon-svg {
+  fill: #4d5ae5;
 }
 
 .comments-input {
@@ -796,7 +810,7 @@ body {
   border-color: #404bbf;
 }
 
-.form-argeement .backdrop {
+.backdrop {
   position: fixed;
   top: 0;
   left: 0;
@@ -825,6 +839,7 @@ body {
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
   opacity: 1;
+  padding: 72px 24px 24px;
 }
 
 .modal-btn {
@@ -839,6 +854,7 @@ body {
   height: 24px;
   padding: 0;
   border-radius: 50%;
+  fill: currentColor;
   background-color: #e7e9fc;
   border: 1px solid rgba(0, 0, 0, 0.1);
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
@@ -849,7 +865,9 @@ body {
   position: absolute;
   width: 8px;
   height: 8px;
-  fill: currentColor;
+  fill: #000000;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-btn:hover,
@@ -857,7 +875,12 @@ body {
   background-color: #404bbf;
 }
 
-.modal-btn:hover .modal-icon-btn:hover,
-.modal-btn:focus .modal-icon-btn:focus {
+/* .modal-btn:hover + .modal-icon-btn,
+.modal-btn:focus + .modal-icon-btn {
+  fill: #ffffff;
+} */
+
+.modal-icon-btn:hover,
+.modal-icon-btn:focus {
   fill: #ffffff;
 }
